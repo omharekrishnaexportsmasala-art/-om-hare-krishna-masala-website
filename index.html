@@ -11,7 +11,7 @@
 a{color:inherit;text-decoration:none}.topbar{background:var(--green);color:#fff;text-align:center;padding:9px 16px;font-size:13px;letter-spacing:.3px}
 header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #eee;box-shadow:0 3px 14px #0000000a}
 .nav{max-width:1180px;margin:auto;padding:8px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:104px}
-.brand{display:flex;align-items:center;flex:0 0 auto}.brand-logo{display:block;width:180px;height:120px;object-fit:contain;object-position:center}
+.brand{display:flex;align-items:center;flex:0 0 auto}.brand-logo{display:block;width:160px;height:120px;object-fit:cover;object-position:center;border:none}
 nav{display:flex;gap:22px;align-items:center;font-size:14px}nav a:hover{color:var(--red)}
 .btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:30px;padding:13px 22px;background:var(--red);color:#fff;font-weight:bold;cursor:pointer;transition:.2s}.btn:hover{background:#941713;transform:translateY(-1px)}.btn.outline{background:transparent;color:var(--green);border:1px solid var(--green)}
 .menu{display:none;background:none;border:0;font-size:27px;cursor:pointer;color:var(--green)}
@@ -109,16 +109,41 @@ footer h3{font-family:Georgia,'Times New Roman',serif;letter-spacing:.2px}
  .panel{padding:22px}
 }
 
+
+/* Website theme selector palettes */
+body[data-theme="classic"]{--green:#103b2b;--green2:#1c6044;--red:#a92720;--gold:#c9a45c;--cream:#fbf8f1;--ink:#1d2923;--muted:#68756d}
+body[data-theme="royal"]{--green:#54213b;--green2:#793451;--red:#8d263f;--gold:#d5ad62;--cream:#fbf3f0;--ink:#30212a;--muted:#786873}
+body[data-theme="midnight"]{--green:#171717;--green2:#303030;--red:#b58b42;--gold:#d9b86c;--cream:#242321;--ink:#f3eee4;--muted:#c3bbaa}
+body[data-theme="ocean"]{--green:#123b58;--green2:#1b5c7b;--red:#b46a3c;--gold:#c6b477;--cream:#eff5f7;--ink:#1c2d38;--muted:#647984}
+body[data-theme="midnight"]{background:#171717;color:var(--ink)}
+body[data-theme="midnight"] header,body[data-theme="midnight"] .panel,body[data-theme="midnight"] .product-card,body[data-theme="midnight"] .feature{background:#242321;color:var(--ink);border-color:#48443b}
+body[data-theme="midnight"] .products-section,body[data-theme="midnight"] .features{background:#1c1b19}
+body[data-theme="midnight"] .hero{background:linear-gradient(115deg,#242321,#353027 60%,#66512d)}
+body[data-theme="midnight"] .hero p,body[data-theme="midnight"] .product-card p,body[data-theme="midnight"] .panel p{color:#c3bbaa}
+body[data-theme="midnight"] .hero-note{background:#242321;color:#f3eee4}
+body[data-theme="midnight"] input,body[data-theme="midnight"] textarea,body[data-theme="midnight"] select{background:#302e29;color:#f3eee4;border-color:#625b4d}
+body[data-theme="royal"] .hero{background:linear-gradient(115deg,#fbf3f0,#f2e3df 60%,#d8b7a7)}
+body[data-theme="ocean"] .hero{background:linear-gradient(115deg,#eff5f7,#dcebf0 60%,#a9c8d5)}
+body[data-theme="royal"] .products-section,body[data-theme="royal"] .features{background:#f8eeeb}
+body[data-theme="ocean"] .products-section,body[data-theme="ocean"] .features{background:#eaf2f5}
+.theme-control{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.theme-control label{margin:0;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.theme-select{width:auto;min-width:132px;padding:10px 30px 10px 11px;border:1px solid #d8d2c5;border-radius:5px;background:#fff;color:#26352d;font-size:12px;font-weight:700;cursor:pointer}
+body[data-theme="midnight"] .theme-select{background:#302e29;color:#f3eee4;border-color:#625b4d}
+@media(max-width:850px){.theme-control{margin-left:auto}.theme-control label{display:none}.theme-select{min-width:118px;padding:9px 22px 9px 8px;font-size:11px}}
+@media(max-width:520px){.theme-select{min-width:108px;max-width:115px}}
+
 </style>
 </head>
 <body>
 <div class="topbar">Authentic Indian Spices • Retail • Wholesale • Export Enquiries</div>
 <header><div class="nav">
   <a class="brand" href="#home" aria-label="OM HARE KRISHNA EXPORTS MASALA Home">
-    <img src="./logo.png" alt="OM HARE KRISHNA EXPORTS MASALA Logo" class="brand-logo" onerror="this.onerror=null;this.src='./LOGO.jpeg';">
+    <img src="./LOGO.jpeg" alt="OM HARE KRISHNA EXPORTS MASALA Logo" class="brand-logo" onerror="this.onerror=null;this.src='./LOGO.jpeg';">
   </a>
   <button class="menu" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
   <nav id="mainNav"><a href="#home" onclick="closeMenu()">Home</a><a href="#products" onclick="closeMenu()">Our Products</a><a href="#about" onclick="closeMenu()">About Us</a><a href="#wholesale" onclick="closeMenu()">Wholesale & Export</a><a href="#contact" onclick="closeMenu()">Contact</a></nav>
+  <div class="theme-control"><label for="themeSelect">Theme</label><select id="themeSelect" class="theme-select" aria-label="Choose website theme"><option value="classic">Classic Green</option><option value="royal">Royal Maroon</option><option value="midnight">Midnight Gold</option><option value="ocean">Ocean Blue</option></select></div>
   <a class="btn" href="#products">Explore Products</a>
 </div></header>
 <main>
@@ -233,6 +258,19 @@ document.getElementById('enquiryForm').addEventListener('submit',e=>{
   window.open('https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(msg),'_blank','noopener');
 });
 document.getElementById('year').textContent=new Date().getFullYear();
+const themeSelect=document.getElementById('themeSelect');
+function applyTheme(theme){
+  const allowed=['classic','royal','midnight','ocean'];
+  const chosen=allowed.includes(theme)?theme:'classic';
+  document.body.setAttribute('data-theme',chosen);
+  themeSelect.value=chosen;
+  try{localStorage.setItem('ohk-site-theme',chosen);}catch(e){}
+}
+let savedTheme='classic';
+try{savedTheme=localStorage.getItem('ohk-site-theme')||'classic';}catch(e){}
+applyTheme(savedTheme);
+themeSelect.addEventListener('change',()=>applyTheme(themeSelect.value));
+
 </script>
 </body>
 </html>
