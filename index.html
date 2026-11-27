@@ -11,7 +11,7 @@
 a{color:inherit;text-decoration:none}.topbar{background:var(--green);color:#fff;text-align:center;padding:9px 16px;font-size:13px;letter-spacing:.3px}
 header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #eee;box-shadow:0 3px 14px #0000000a}
 .nav{max-width:1180px;margin:auto;padding:8px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:104px}
-.brand{display:flex;align-items:center;flex:0 0 auto}.brand-logo{display:block;width:180px;height:110px;object-fit:cover;object-position:center;border:none}
+.brand{display:flex;align-items:center;flex:0 0 auto}.brand-logo{display:block;width:180px;height:96px;object-fit:contain;object-position:left center}
 nav{display:flex;gap:22px;align-items:center;font-size:14px}nav a:hover{color:var(--red)}
 .btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:30px;padding:13px 22px;background:var(--red);color:#fff;font-weight:bold;cursor:pointer;transition:.2s}.btn:hover{background:#941713;transform:translateY(-1px)}.btn.outline{background:transparent;color:var(--green);border:1px solid var(--green)}
 .menu{display:none;background:none;border:0;font-size:27px;cursor:pointer;color:var(--green)}
@@ -43,13 +43,79 @@ footer{background:#0d321f;color:#fff;padding:42px 22px 18px}.footer-grid{max-wid
 .cartbar{position:fixed;right:18px;bottom:18px;z-index:20;background:var(--red);color:#fff;padding:13px 18px;border-radius:30px;box-shadow:0 8px 24px #0003;font-weight:bold;cursor:pointer;border:0}.small{font-size:12px;color:var(--muted);line-height:1.5}
 @media(max-width:850px){.nav{min-height:82px}.brand-logo{width:145px;height:76px}nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;padding:18px 24px;flex-direction:column;align-items:flex-start;border-bottom:1px solid #eee}nav.open{display:flex}.menu{display:block}.nav>.btn{display:none}.hero-inner{grid-template-columns:1fr;padding-top:48px}.hero-art{height:220px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.feature-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){section{padding:48px 16px}.nav{padding:7px 16px;min-height:76px}.brand-logo{width:128px;height:66px}.product-grid{gap:10px}.product-image{height:112px;font-size:52px}.product-card h3{font-size:15px}.product-card p{font-size:12px}.order-btn{padding:9px 10px;font-size:11px;margin-left:8px;margin-right:8px}.feature-grid{gap:4px}.enquiry-grid,.footer-grid{grid-template-columns:1fr}.hero-inner{padding-left:18px;padding-right:18px}.hero p{font-size:15px}.cartbar{right:12px;bottom:12px;padding:11px 15px}}
+
+/* Premium international brand refinement */
+:root{
+  --green:#103b2b;--green2:#1c6044;--red:#a92720;--gold:#c9a45c;
+  --cream:#fbf8f1;--ink:#1d2923;--muted:#68756d;
+}
+body{font-family:Inter,Arial,Helvetica,sans-serif;letter-spacing:.05px}
+.topbar{background:#0b2e22;font-size:12px;letter-spacing:1.1px;text-transform:uppercase;padding:11px 16px}
+header{background:rgba(255,255,255,.97);backdrop-filter:blur(12px)}
+.nav{max-width:1320px;min-height:96px;padding:10px 30px}
+.brand-logo{width:190px;height:82px;object-fit:contain}
+nav{font-size:13px;font-weight:700;letter-spacing:.35px;gap:27px}
+nav a{transition:color .2s}
+.btn{border-radius:5px;padding:14px 23px;background:var(--green);font-size:12px;letter-spacing:.8px;text-transform:uppercase;box-shadow:0 7px 18px #103b2b20}
+.btn:hover{background:var(--red)}
+.btn.outline{border-radius:5px}
+.hero{background:linear-gradient(115deg,#f7f4eb 0%,#f2ead7 58%,#d7c18e 100%);position:relative}
+.hero-inner{max-width:1320px;min-height:510px;padding:82px 30px;gap:55px}
+.eyebrow{font-size:11px;letter-spacing:2.8px;color:#9d3329}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(44px,5.4vw,76px);letter-spacing:-1.8px;line-height:1.02;color:#103b2b;margin:20px 0}
+.hero p{font-size:16px;line-height:1.9;color:#4e5a51;max-width:530px}
+.hero-art{height:340px;border-radius:12px;background:radial-gradient(circle at 50% 35%,#e8c77c,#a86b32 55%,#442c1d 100%);box-shadow:0 25px 55px #53391d35;outline:1px solid #ffffff80;outline-offset:-12px}
+.spice-bowls{font-size:clamp(65px,8vw,112px)}
+.hero-note{bottom:28px;border:1px solid #d8c18d;letter-spacing:.5px;text-transform:uppercase;font-size:10px}
+section{padding:82px 30px}
+.wrap{max-width:1320px}
+.section-head{margin-bottom:42px}
+.section-head h2,.section-title{font-family:Georgia,'Times New Roman',serif;font-size:clamp(30px,4vw,44px);letter-spacing:-.6px}
+.section-head p,.section-subtitle{font-size:14px;letter-spacing:.25px}
+.products-section{background:#f8f6ef;padding:82px 30px}
+.product-grid{max-width:1320px;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.product-card{border:1px solid #e8e1d2;border-radius:8px;box-shadow:0 8px 25px #1c30200a;transition:transform .25s,box-shadow .25s}
+.product-card:hover{transform:translateY(-6px);box-shadow:0 16px 32px #1c302018}
+.product-image{height:158px;background:linear-gradient(135deg,#f0e4c7,#dfc58d);font-size:66px}
+.product-card h3{font-family:Georgia,'Times New Roman',serif;font-size:18px;margin:18px 10px 8px}
+.product-card p{font-size:12px;line-height:1.7;color:#778078}
+.order-btn{border-radius:4px;letter-spacing:.35px;text-transform:uppercase;font-size:10px;padding:12px 13px;margin-bottom:10px}
+.features{background:#f3f1e9}
+.feature-grid{gap:20px}
+.feature{background:#fff;border:1px solid #e9e5da;border-radius:8px;padding:28px 18px;box-shadow:0 7px 22px #172e1c08}
+.feature .ico{font-size:30px}
+.feature h3{font-family:Georgia,'Times New Roman',serif;font-size:19px}
+.enquiry-grid{gap:26px}
+.panel{border:1px solid #e8e3d8;border-radius:8px;padding:32px;box-shadow:0 10px 28px #172e1c08}
+.panel h3{font-family:Georgia,'Times New Roman',serif}
+input,textarea,select{border-radius:4px;border-color:#d8d9d1;padding:13px}
+input:focus,textarea:focus,select:focus{outline:2px solid #c9a45c55;border-color:#b18d4d}
+footer{background:#09271d;padding-top:55px}
+footer h3{font-family:Georgia,'Times New Roman',serif;letter-spacing:.2px}
+.footer-grid{max-width:1320px}
+.copyright{max-width:1320px}
+.cartbar{border-radius:5px;background:#a92720;letter-spacing:.4px;text-transform:uppercase;font-size:12px}
+@media(max-width:850px){
+ .nav{padding:8px 20px}.brand-logo{width:155px;height:70px}
+ .hero-inner{padding:58px 22px;gap:32px}.hero-art{height:250px}
+ section,.products-section{padding:60px 20px}
+ .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:520px){
+ .nav{padding:7px 15px}.brand-logo{width:132px;height:62px}
+ .hero-inner{padding:48px 18px}.hero-art{height:205px}
+ section,.products-section{padding:48px 15px}
+ .product-grid{gap:12px}.product-image{height:110px}
+ .panel{padding:22px}
+}
+
 </style>
 </head>
 <body>
 <div class="topbar">Authentic Indian Spices • Retail • Wholesale • Export Enquiries</div>
 <header><div class="nav">
   <a class="brand" href="#home" aria-label="OM HARE KRISHNA EXPORTS MASALA Home">
-    <img src="./LOGO.jpeg" alt="OM HARE KRISHNA EXPORTS MASALA Logo" class="brand-logo">
+    <img src="./logo.png" alt="OM HARE KRISHNA EXPORTS MASALA Logo" class="brand-logo" onerror="this.onerror=null;this.src='./LOGO.jpeg';">
   </a>
   <button class="menu" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
   <nav id="mainNav"><a href="#home" onclick="closeMenu()">Home</a><a href="#products" onclick="closeMenu()">Our Products</a><a href="#about" onclick="closeMenu()">About Us</a><a href="#wholesale" onclick="closeMenu()">Wholesale & Export</a><a href="#contact" onclick="closeMenu()">Contact</a></nav>
