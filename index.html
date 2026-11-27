@@ -54,21 +54,38 @@ footer{text-align:center;padding:25px;color:#a99f8e;background:#090908;font-size
 <div class="drawer-backdrop" id="cartBackdrop" onclick="if(event.target===this)closeCart()"><aside class="drawer" role="dialog" aria-modal="true" aria-label="Shopping cart"><div class="drawer-head"><h2>Your Cart</h2><button class="close" onclick="closeCart()" aria-label="Close cart">×</button></div><div id="cartItems"></div><div class="cart-note">Prices and pack sizes will be confirmed by our team on WhatsApp.</div><button class="btn" onclick="checkoutWhatsApp()">Send Order on WhatsApp</button><button class="btn btn-outline" onclick="closeCart()">Continue Shopping</button></aside></div>
 <script>
 const products=[
-{name:"Haldi Powder",category:"Powder",icon:"🟡",desc:"Turmeric powder"},
-{name:"Dhana Jeera Jino Cut",category:"Masala",icon:"🌿",desc:"Fine-cut coriander and cumin blend"},
-{name:"Dhana Jeera",category:"Masala",icon:"🌱",desc:"Coriander and cumin blend"},
-{name:"Red Chili",category:"Powder",icon:"🌶️",desc:"Red chilli"},
-{name:"Amchoor Powder",category:"Powder",icon:"🥭",desc:"Dry mango powder"},
-{name:"Garam Masala",category:"Masala",icon:"🫚",desc:"Traditional Indian spice blend"},
-{name:"Rajwadi Garam Masala",category:"Masala",icon:"👑",desc:"Rajwadi-style garam masala"},
-{name:"Pavbhaji Masala",category:"Masala",icon:"🍲",desc:"Pav bhaji masala"},
-{name:"Panner Masala",category:"Masala",icon:"🍛",desc:"Paneer masala"},
-{name:"Sambhar Masala (Dal Fry)",category:"Masala",icon:"🥣",desc:"Sambhar masala (Dal Fry)"},
-{name:"Pickel Masala",category:"Masala",icon:"🥒",desc:"Pickle masala"},
-{name:"Hing",category:"Other",icon:"✨",desc:"Hing"},
-{name:"Chhash Masala",category:"Masala",icon:"🥛",desc:"Chhash masala"},
-{name:"Chai Masala",category:"Masala",icon:"☕",desc:"Chai masala"}
-];
+  ['Haldi Powder','🟡'],
+  ['Dhana Jeera Jino Cut','🌿'],
+  ['Dhana Jeera','🌿'],
+  ['Red Chili','🌶️'],
+  ['Amchoor Powder','🥭'],
+  ['Garam Masala','🥘'],
+  ['Rajwadi Garam Masala','🍲'],
+  ['Pavbhaji Masala','🥣'],
+  ['Panner Masala','🧀'],
+  ['Sambhar Masala (Dal Fry)','🍛'],
+  ['Pickel Masala','🥒'],
+  ['Hing','🟤'],
+  ['Chhash Masala','🥛'],
+  ['Chatt Masala','🍋'],
+  ['Sambhar Masala (Idali)','🥣'],
+  ['Chai Masala','☕'],
+  ['Chhole Bhature Masala','🍛'],
+  ['Kadhi Masala','🥣'],
+  ['Khichadi Masala','🍚'],
+  ['Jeera (Akhu)','🌾'],
+  ['Jeera Powder','🌾'],
+  ['Chiken Fry Masala','🍗'],
+  ['Chiken Masala','🍗'],
+  ['Biryani Masala','🍚'],
+  ['Matan Masala','🍖'],
+  ['Fish Masala','🐟'],
+  ['Tej Patta','🍃'],
+  ['Ilaichi','🟢'],
+  ['Black Pepper (Mari)','⚫'],
+  ['Clove (Laung)','🌰'],
+  ['Star Anise (Badiyan)','⭐'],
+  ['Dalchini (Taj)','🪵']
 const phone="919638156463";let activeFilter="All",cart={};
 function renderProducts(){const q=document.getElementById("searchBox").value.trim().toLowerCase();const shown=products.filter(p=>(activeFilter==="All"||p.category===activeFilter)&&(p.name+" "+p.desc).toLowerCase().includes(q));document.getElementById("productGrid").innerHTML=shown.length?shown.map(p=>`<article class="product"><div class="product-art" aria-hidden="true">${p.icon}</div><div class="product-body"><h3>${p.name}</h3><p>${p.desc}</p><div class="price-note">Price & pack size: Enquire on WhatsApp</div><button class="btn" onclick="addToCart('${p.name.replace(/'/g,"\\'")}')">Add to Cart / Enquire</button></div></article>`).join(""):'<div class="empty">No matching products found.</div>'}
 function filterProducts(category,button){activeFilter=category;document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));button.classList.add("active");renderProducts()}
