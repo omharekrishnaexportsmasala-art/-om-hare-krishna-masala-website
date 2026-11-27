@@ -53,8 +53,179 @@ footer{background:#0d321f;color:#fff;padding:42px 22px 18px}.footer-grid{max-wid
   </div>
   <div class="hero-art" role="img" aria-label="Illustration of Indian spices"><div class="spice-bowls">🌶️ 🥣 🌿</div><div class="hero-note">A taste of Indian kitchens</div></div>
 </div></section>
-<section id="products"><div class="wrap"><div class="section-head"><h2>Our Masala Products</h2><p>Explore the product range. Contact us for availability, pack sizes and pricing.</p></div><div class="products" id="productGrid"></div></div></section>
-<section class="features" id="about"><div class="wrap"><div class="section-head"><h2>About Our Brand</h2><p>OM HARE KRISHNA EXPORTS MASALA</p></div><div class="feature-grid">
+<style>
+.products-section {
+  padding: 65px 20px;
+  background: #fff9e9;
+  text-align: center;
+}
+
+.products-section .section-title {
+  color: #123d27;
+  font-family: Georgia, serif;
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.products-section .section-subtitle {
+  color: #666;
+  margin-bottom: 35px;
+}
+
+.product-grid {
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #eadfc5;
+  box-shadow: 0 5px 18px #00000010;
+  transition: .3s;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px #00000020;
+}
+
+.product-image {
+  height: 175px;
+  background: linear-gradient(135deg,#f8e8bc,#e9c46a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 75px;
+}
+
+.product-card h3 {
+  color: #123d27;
+  font-family: Georgia, serif;
+  font-size: 19px;
+  margin: 18px 8px 10px;
+}
+
+.product-card p {
+  color: #777;
+  font-size: 13px;
+  margin: 8px;
+}
+
+.order-btn {
+  display: inline-block;
+  margin: 12px 0 20px;
+  padding: 11px 20px;
+  border-radius: 25px;
+  background: #b91f1c;
+  color: white !important;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.order-btn:hover {
+  background: #123d27;
+}
+
+@media(max-width:850px) {
+  .product-grid {
+    grid-template-columns: repeat(2,1fr);
+    gap: 14px;
+  }
+}
+
+@media(max-width:420px) {
+  .products-section {
+    padding: 45px 12px;
+  }
+  .product-grid {
+    gap: 10px;
+  }
+  .product-image {
+    height: 125px;
+    font-size: 55px;
+  }
+  .product-card h3 {
+    font-size: 15px;
+  }
+  .order-btn {
+    padding: 9px 12px;
+    font-size: 11px;
+  }
+}
+</style>
+
+<section class="products-section" id="products">
+  <h2 class="section-title">Our Masala Products</h2>
+  <p class="section-subtitle">
+    Discover the Authentic Taste of Indian Spices
+  </p>
+
+  <div class="product-grid">
+
+    <div class="product-card">
+      <div class="product-image">🌕</div>
+      <h3>Haldi Powder</h3>
+      <p>Premium Quality Turmeric</p>
+      <a class="order-btn" href="https://wa.me/919638156463?text=I%20want%20to%20order%20Haldi%20Powder">Order on WhatsApp</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">🌿</div>
+      <h3>Dhana Jeera Powder</h3>
+      <p>Authentic Indian Spice Blend</p>
+      <a class="order-btn" href="https://wa.me/919638156463?text=I%20want%20to%20order%20Dhana%20Jeera%20Powder">Order on WhatsApp</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">🥘</div>
+      <h3>Garam Masala</h3>
+      <p>Traditional Indian Flavour</p>
+      <a class="order-btn" href="https://wa.me/919638156463?text=I%20want%20to%20order%20Garam%20Masala">Order on WhatsApp</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">🌶️</div>
+      <h3>Red Chilli Powder</h3>
+      <p>Rich Colour and Flavour</p>
+      <a class="order-btn" href="https://wa.me/919638156463?text=I%20want%20to%20order%20Red%20Chilli%20Powder">Order on WhatsApp</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">🍋</div>
+      <h3>Chaat Masala</h3>
+      <p>Tangy and Delicious Taste</p>
+      <a class="order-btn" href="https://wa.me/919638156463?text=I%20want%20to%20order%20Chaat%20Masala">Order on WhatsApp</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">🍗</div>
+      <h3>Chicken Masala</h3>
+      <p>Authentic Indian Taste</p>
+      <a class="order-btn" href="https://wa.me/919638156463?text=I%20want%20to%20order%20Chicken%20Masala">Order on WhatsApp</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">🍛</div>
+      <h3>Chhole Bhature Masala</h3>
+      <p>Traditional Punjabi Flavour</p>
+      <a class="order-btn" href="https://wa.me/919638156463?text=I%20want%20to%20order%20Chhole%20Bhature%20Masala">Order on WhatsApp</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">🥣</div>
+      <h3>Pav Bhaji Masala</h3>
+      <p>Delicious Street Food Flavour</p>
+      <a class="order-btn" href="https://wa.me/919638156463?text=I%20want%20to%20order%20Pav%20Bhaji%20Masala">Order on WhatsApp</a>
+    </div>
+
+  </div>
+</section><section class="features" id="about"><div class="wrap"><div class="section-head"><h2>About Our Brand</h2><p>OM HARE KRISHNA EXPORTS MASALA</p></div><div class="feature-grid">
   <div class="feature"><div class="ico">🌶️</div><h3>Indian Spice Range</h3><p>A range of familiar masala products for everyday cooking.</p></div>
   <div class="feature"><div class="ico">🛍️</div><h3>Retail Enquiries</h3><p>Get in touch for product and order enquiries.</p></div>
   <div class="feature"><div class="ico">📦</div><h3>Wholesale Enquiries</h3><p>Contact us to discuss wholesale requirements.</p></div>
