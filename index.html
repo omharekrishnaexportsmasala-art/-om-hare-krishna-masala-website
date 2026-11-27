@@ -11,7 +11,7 @@
 a{color:inherit;text-decoration:none}.topbar{background:var(--green);color:#fff;text-align:center;padding:9px 16px;font-size:13px;letter-spacing:.3px}
 header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #eee;box-shadow:0 3px 14px #0000000a}
 .nav{max-width:1180px;margin:auto;padding:8px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:104px}
-.brand{display:flex;align-items:center;flex:0 0 auto}.brand-logo{display:block;width:180px;height:110px;object-fit:cover;object-position:center;border: none;}
+.brand{display:flex;align-items:center;flex:0 0 auto}.brand-logo{display:block;width:180px;height:96px;object-fit:contain;object-position:left center}
 nav{display:flex;gap:22px;align-items:center;font-size:14px}nav a:hover{color:var(--red)}
 .btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:30px;padding:13px 22px;background:var(--red);color:#fff;font-weight:bold;cursor:pointer;transition:.2s}.btn:hover{background:#941713;transform:translateY(-1px)}.btn.outline{background:transparent;color:var(--green);border:1px solid var(--green)}
 .menu{display:none;background:none;border:0;font-size:27px;cursor:pointer;color:var(--green)}
@@ -23,23 +23,33 @@ h1{font-family:Georgia,serif;font-size:clamp(38px,5vw,62px);line-height:1.04;col
 .hero-art{height:300px;border-radius:48% 52% 44% 56%;background:linear-gradient(135deg,#6c2c15,#c47b25 48%,#f0c35d);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 50px #49210c66,0 22px 45px #68401c33;position:relative}
 .spice-bowls{font-size:clamp(55px,8vw,100px);filter:drop-shadow(0 10px 5px #44220a66)}.hero-note{position:absolute;bottom:22px;background:#fffdf0e8;padding:10px 18px;border-radius:30px;font-weight:bold;color:var(--green);font-size:13px}
 section{padding:68px 22px}.wrap{max-width:1180px;margin:auto}.section-head{text-align:center;margin-bottom:32px}.section-head h2{font:bold clamp(28px,4vw,40px) Georgia,serif;color:var(--green);margin:0 0 10px}.section-head p{color:var(--muted);margin:0;line-height:1.6}
-.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{border:1px solid #ece9df;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 8px 25px #183c2410;display:flex;flex-direction:column}
-.product-art{height:145px;display:flex;align-items:center;justify-content:center;font-size:66px;background:linear-gradient(145deg,#fff4d6,#f0d69b)}.product:nth-child(3n+2) .product-art{background:linear-gradient(145deg,#e4f0d8,#b6d39b)}.product:nth-child(3n) .product-art{background:linear-gradient(145deg,#ffe1d4,#e7a28a)}
-.product-body{padding:17px;display:flex;flex-direction:column;flex:1}.product h3{font:bold 19px Georgia,serif;color:var(--green);margin:0 0 8px}.product p{font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 15px;flex:1}.product .btn{width:100%;padding:11px;font-size:13px}
+.products-section{padding:65px 20px;background:#fff9e9;text-align:center}
+.section-title{color:var(--green);font-family:Georgia,serif;font-size:clamp(28px,4vw,36px);margin:0 0 12px}
+.section-subtitle{color:#666;margin:0 0 35px}
+.product-grid{max-width:1150px;margin:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;text-align:center}
+.product-card{background:#fff;border-radius:15px;overflow:hidden;border:1px solid #eadfc5;box-shadow:0 5px 18px #00000010;transition:.3s;display:flex;flex-direction:column}
+.product-card:hover{transform:translateY(-5px);box-shadow:0 10px 25px #00000020}
+.product-image{height:145px;background:linear-gradient(135deg,#f8e8bc,#e9c46a);display:flex;align-items:center;justify-content:center;font-size:65px}
+.product-card:nth-child(3n+2) .product-image{background:linear-gradient(135deg,#e4f0d8,#b6d39b)}
+.product-card:nth-child(3n) .product-image{background:linear-gradient(135deg,#ffe1d4,#e7a28a)}
+.product-card h3{color:var(--green);font-family:Georgia,serif;font-size:18px;margin:16px 10px 8px}
+.product-card p{color:#777;font-size:13px;line-height:1.5;margin:0 12px 12px;flex:1}
+.order-btn{display:inline-block;margin:4px 12px 16px;padding:11px 14px;border-radius:25px;background:var(--red);color:white!important;font-weight:bold;font-size:12px}
+.order-btn:hover{background:var(--green)}
 .features{background:var(--cream)}.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.feature{text-align:center;padding:20px 12px}.feature .ico{font-size:34px}.feature h3{color:var(--green);font:bold 18px Georgia,serif;margin:10px 0 6px}.feature p{font-size:13px;color:var(--muted);line-height:1.5;margin:0}
 .enquiry-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.panel{padding:28px;border:1px solid #e9e7df;border-radius:18px;background:#fff}.panel h3{font:bold 24px Georgia,serif;color:var(--green);margin:0 0 12px}.panel p{color:var(--muted);line-height:1.6}
 label{display:block;font-size:13px;font-weight:bold;margin:12px 0 6px}input,textarea,select{width:100%;padding:12px;border:1px solid #d8ddd7;border-radius:9px;font:inherit;background:#fff}textarea{min-height:95px;resize:vertical}.contactline{padding:9px 0;border-bottom:1px solid #edf0eb;color:#344238;font-size:14px}
 footer{background:#0d321f;color:#fff;padding:42px 22px 18px}.footer-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:28px}footer h3{font:bold 22px Georgia,serif;margin:0 0 13px;color:#f4d27b}footer p,footer a{font-size:13px;line-height:1.8;color:#e2eadf}.copyright{max-width:1180px;margin:28px auto 0;padding-top:16px;border-top:1px solid #ffffff33;font-size:12px;color:#d5dfd4}
 .cartbar{position:fixed;right:18px;bottom:18px;z-index:20;background:var(--red);color:#fff;padding:13px 18px;border-radius:30px;box-shadow:0 8px 24px #0003;font-weight:bold;cursor:pointer;border:0}.small{font-size:12px;color:var(--muted);line-height:1.5}
-@media(max-width:850px){.nav{min-height:82px}.brand-logo{width:132px;height:78px}nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;padding:18px 24px;flex-direction:column;align-items:flex-start;border-bottom:1px solid #eee}nav.open{display:flex}.menu{display:block}.nav>.btn{display:none}.hero-inner{grid-template-columns:1fr;padding-top:48px}.hero-art{height:220px}.products{grid-template-columns:repeat(2,1fr)}.feature-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){section{padding:48px 16px}.nav{padding:7px 16px;min-height:76px}.brand-logo{width:116px;height:70px}.products{gap:11px}.product-art{height:110px;font-size:52px}.product-body{padding:12px}.product h3{font-size:16px}.feature-grid{gap:4px}.enquiry-grid,.footer-grid{grid-template-columns:1fr}.hero-inner{padding-left:18px;padding-right:18px}.hero p{font-size:15px}.cartbar{right:12px;bottom:12px;padding:11px 15px}}
+@media(max-width:850px){.nav{min-height:82px}.brand-logo{width:145px;height:76px}nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;padding:18px 24px;flex-direction:column;align-items:flex-start;border-bottom:1px solid #eee}nav.open{display:flex}.menu{display:block}.nav>.btn{display:none}.hero-inner{grid-template-columns:1fr;padding-top:48px}.hero-art{height:220px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.feature-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){section{padding:48px 16px}.nav{padding:7px 16px;min-height:76px}.brand-logo{width:128px;height:66px}.product-grid{gap:10px}.product-image{height:112px;font-size:52px}.product-card h3{font-size:15px}.product-card p{font-size:12px}.order-btn{padding:9px 10px;font-size:11px;margin-left:8px;margin-right:8px}.feature-grid{gap:4px}.enquiry-grid,.footer-grid{grid-template-columns:1fr}.hero-inner{padding-left:18px;padding-right:18px}.hero p{font-size:15px}.cartbar{right:12px;bottom:12px;padding:11px 15px}}
 </style>
 </head>
 <body>
 <div class="topbar">Authentic Indian Spices • Retail • Wholesale • Export Enquiries</div>
 <header><div class="nav">
   <a class="brand" href="#home" aria-label="OM HARE KRISHNA EXPORTS MASALA Home">
-    <img src="./LOGO.jpeg" alt="OM HARE KRISHNA EXPORTS MASALA Logo" class="brand-logo">
+    <img src="./logo.png" alt="OM HARE KRISHNA EXPORTS MASALA Logo" class="brand-logo">
   </a>
   <button class="menu" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
   <nav id="mainNav"><a href="#home" onclick="closeMenu()">Home</a><a href="#products" onclick="closeMenu()">Our Products</a><a href="#about" onclick="closeMenu()">About Us</a><a href="#wholesale" onclick="closeMenu()">Wholesale & Export</a><a href="#contact" onclick="closeMenu()">Contact</a></nav>
@@ -53,179 +63,12 @@ footer{background:#0d321f;color:#fff;padding:42px 22px 18px}.footer-grid{max-wid
   </div>
   <div class="hero-art" role="img" aria-label="Illustration of Indian spices"><div class="spice-bowls">🌶️ 🥣 🌿</div><div class="hero-note">A taste of Indian kitchens</div></div>
 </div></section>
-<style>
-.products-section {
-  padding: 65px 20px;
-  background: #fff9e9;
-  text-align: center;
-}
-
-.products-section .section-title {
-  color: #123d27;
-  font-family: Georgia, serif;
-  font-size: 36px;
-  margin-bottom: 12px;
-}
-
-.products-section .section-subtitle {
-  color: #666;
-  margin-bottom: 35px;
-}
-
-.product-grid {
-  max-width: 1150px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-}
-
-.product-card {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  border: 1px solid #eadfc5;
-  box-shadow: 0 5px 18px #00000010;
-  transition: .3s;
-}
-
-.product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px #00000020;
-}
-
-.product-image {
-  height: 175px;
-  background: linear-gradient(135deg,#f8e8bc,#e9c46a);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 75px;
-}
-
-.product-card h3 {
-  color: #123d27;
-  font-family: Georgia, serif;
-  font-size: 19px;
-  margin: 18px 8px 10px;
-}
-
-.product-card p {
-  color: #777;
-  font-size: 13px;
-  margin: 8px;
-}
-
-.order-btn {
-  display: inline-block;
-  margin: 12px 0 20px;
-  padding: 11px 20px;
-  border-radius: 25px;
-  background: #b91f1c;
-  color: white !important;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 13px;
-}
-
-.order-btn:hover {
-  background: #123d27;
-}
-
-@media(max-width:850px) {
-  .product-grid {
-    grid-template-columns: repeat(2,1fr);
-    gap: 14px;
-  }
-}
-
-@media(max-width:420px) {
-  .products-section {
-    padding: 45px 12px;
-  }
-  .product-grid {
-    gap: 10px;
-  }
-  .product-image {
-    height: 125px;
-    font-size: 55px;
-  }
-  .product-card h3 {
-    font-size: 15px;
-  }
-  .order-btn {
-    padding: 9px 12px;
-    font-size: 11px;
-  }
-}
-</style>
-
 <section class="products-section" id="products">
   <h2 class="section-title">Our Masala Products</h2>
-  <p class="section-subtitle">
-    Discover the Authentic Taste of Indian Spices
-  </p>
-
-  <div class="product-grid">
-
-    <div class="product-card">
-      <div class="product-image">🌕</div>
-      <h3>Haldi Powder</h3>
-      <p>Premium Quality Turmeric</p>
-      <a class="order-btn" href="https://wa.me/919638156463?text=I%20want%20to%20order%20Haldi%20Powder">Order on WhatsApp</a>
-    </div>
-
-    <div class="product-card">
-      <div class="product-image">🌿</div>
-      <h3>Dhana Jeera Powder</h3>
-      <p>Authentic Indian Spice Blend</p>
-      <a class="order-btn" href="https://wa.me/919638156463?text=I%20want%20to%20order%20Dhana%20Jeera%20Powder">Order on WhatsApp</a>
-    </div>
-
-    <div class="product-card">
-      <div class="product-image">🥘</div>
-      <h3>Garam Masala</h3>
-      <p>Traditional Indian Flavour</p>
-      <a class="order-btn" href="https://wa.me/919638156463?text=I%20want%20to%20order%20Garam%20Masala">Order on WhatsApp</a>
-    </div>
-
-    <div class="product-card">
-      <div class="product-image">🌶️</div>
-      <h3>Red Chilli Powder</h3>
-      <p>Rich Colour and Flavour</p>
-      <a class="order-btn" href="https://wa.me/919638156463?text=I%20want%20to%20order%20Red%20Chilli%20Powder">Order on WhatsApp</a>
-    </div>
-
-    <div class="product-card">
-      <div class="product-image">🍋</div>
-      <h3>Chaat Masala</h3>
-      <p>Tangy and Delicious Taste</p>
-      <a class="order-btn" href="https://wa.me/919638156463?text=I%20want%20to%20order%20Chaat%20Masala">Order on WhatsApp</a>
-    </div>
-
-    <div class="product-card">
-      <div class="product-image">🍗</div>
-      <h3>Chicken Masala</h3>
-      <p>Authentic Indian Taste</p>
-      <a class="order-btn" href="https://wa.me/919638156463?text=I%20want%20to%20order%20Chicken%20Masala">Order on WhatsApp</a>
-    </div>
-
-    <div class="product-card">
-      <div class="product-image">🍛</div>
-      <h3>Chhole Bhature Masala</h3>
-      <p>Traditional Punjabi Flavour</p>
-      <a class="order-btn" href="https://wa.me/919638156463?text=I%20want%20to%20order%20Chhole%20Bhature%20Masala">Order on WhatsApp</a>
-    </div>
-
-    <div class="product-card">
-      <div class="product-image">🥣</div>
-      <h3>Pav Bhaji Masala</h3>
-      <p>Delicious Street Food Flavour</p>
-      <a class="order-btn" href="https://wa.me/919638156463?text=I%20want%20to%20order%20Pav%20Bhaji%20Masala">Order on WhatsApp</a>
-    </div>
-
-  </div>
-</section><section class="features" id="about"><div class="wrap"><div class="section-head"><h2>About Our Brand</h2><p>OM HARE KRISHNA EXPORTS MASALA</p></div><div class="feature-grid">
+  <p class="section-subtitle">Discover the Authentic Taste of Indian Spices</p>
+  <div class="product-grid" id="productGrid"></div>
+</section>
+<section class="features" id="about"><div class="wrap"><div class="section-head"><h2>About Our Brand</h2><p>OM HARE KRISHNA EXPORTS MASALA</p></div><div class="feature-grid">
   <div class="feature"><div class="ico">🌶️</div><h3>Indian Spice Range</h3><p>A range of familiar masala products for everyday cooking.</p></div>
   <div class="feature"><div class="ico">🛍️</div><h3>Retail Enquiries</h3><p>Get in touch for product and order enquiries.</p></div>
   <div class="feature"><div class="ico">📦</div><h3>Wholesale Enquiries</h3><p>Contact us to discuss wholesale requirements.</p></div>
@@ -256,24 +99,73 @@ footer{background:#0d321f;color:#fff;padding:42px 22px 18px}.footer-grid{max-wid
   <div><h3>Quick Links</h3><p><a href="#home">Home</a><br><a href="#products">Our Products</a><br><a href="#about">About Us</a><br><a href="#wholesale">Wholesale & Export</a><br><a href="#contact">Contact Us</a></p></div>
   <div><h3>Contact</h3><p>Krishna Patel<br>+91 9638156463<br>Abrama, Near Petrol Pump, Krishna Banglows, Navsari, 396406<br>FSSAI Lic No.: 20723015000736</p></div>
 </div><div class="copyright">© <span id="year"></span> OM HARE KRISHNA EXPORTS MASALA. All rights reserved.</div></footer>
-<button class="cartbar" onclick="showCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+<button class="cartbar" type="button" onclick="showCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
 <script>
 const WHATSAPP_NUMBER='919638156463';
 const products=[
-  ["Haldi Powder","🟡"],["Dhana Jeera Powder","🌿"],["Garam Masala","🥘"],["Chaat Masala","🍋"],
-  ["Lal Marchu / Red Chilli Powder","🌶️"],["Chai Masala","☕"],["Chhole Bhature Masala","🍛"],
-  ["Amchur Powder","🥭"],["Kitchen King Masala","🍲"],["Pav Bhaji Masala","🥣"],
-  ["Chicken Masala","🍗"],["Chicken Grevy Masala","🍗"],["Kadhi Masala","🥣"],
-  ["Jeera Powder","🌾"],["Butter Milk Masala","🥛"]
+  ['Haldi Powder','🟡'],
+  ['Dhana Jeera Jino Cut','🌿'],
+  ['Dhana Jeera','🌿'],
+  ['Red Chili','🌶️'],
+  ['Amchoor Powder','🥭'],
+  ['Garam Masala','🥘'],
+  ['Rajwadi Garam Masala','🍲'],
+  ['Pavbhaji Masala','🥣'],
+  ['Panner Masala','🧀'],
+  ['Sambhar Masala (Dal Fry)','🍛'],
+  ['Pickel Masala','🥒'],
+  ['Hing','🟤'],
+  ['Chhash Masala','🥛'],
+  ['Chatt Masala','🍋'],
+  ['Sambhar Masala (Idali)','🥣'],
+  ['Chai Masala','☕'],
+  ['Chhole Bhature Masala','🍛'],
+  ['Kadhi Masala','🥣'],
+  ['Khichadi Masala','🍚'],
+  ['Jeera (Akhu)','🌾'],
+  ['Jeera Powder','🌾'],
+  ['Chiken Fry Masala','🍗'],
+  ['Chiken Masala','🍗'],
+  ['Biryani Masala','🍚'],
+  ['Matan Masala','🍖'],
+  ['Fish Masala','🐟'],
+  ['Tej Patta','🍃'],
+  ['Ilaichi','🟢'],
+  ['Black Pepper (Mari)','⚫'],
+  ['Clove (Laung)','🌰'],
+  ['Star Anise (Badiyan)','⭐'],
+  ['Dalchini (Taj)','🪵']
 ];
 let cart=[];
 const grid=document.getElementById('productGrid');
-products.forEach((p,i)=>{const card=document.createElement('article');card.className='product';card.innerHTML=`<div class="product-art">${p[1]}</div><div class="product-body"><h3>${p[0]}</h3><p>Contact us for current availability, pack sizes and pricing.</p><button class="btn" type="button" onclick="addToCart(${i})">Add to Cart</button></div>`;grid.appendChild(card);});
+products.forEach((p,i)=>{
+  const card=document.createElement('article');
+  card.className='product-card';
+  const image=document.createElement('div');image.className='product-image';image.textContent=p[1];
+  const title=document.createElement('h3');title.textContent=p[0];
+  const desc=document.createElement('p');desc.textContent='Contact us for current availability, pack sizes and pricing.';
+  const order=document.createElement('a');order.className='order-btn';order.textContent='Order on WhatsApp';
+  order.href='https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent('Hello, I want to order '+p[0]+'. Please share details.');
+  order.target='_blank';order.rel='noopener';
+  const add=document.createElement('button');add.className='order-btn';add.type='button';add.textContent='Add to Cart';add.addEventListener('click',()=>addToCart(i));
+  card.append(image,title,desc,order,add);grid.appendChild(card);
+});
 function toggleMenu(){const nav=document.getElementById('mainNav');nav.classList.toggle('open');document.querySelector('.menu').setAttribute('aria-expanded',nav.classList.contains('open'));}
 function closeMenu(){const nav=document.getElementById('mainNav');nav.classList.remove('open');document.querySelector('.menu').setAttribute('aria-expanded','false');}
 function addToCart(i){cart.push(products[i][0]);document.getElementById('cartCount').textContent=cart.length;alert(products[i][0]+' added to your cart.');}
-function showCart(){if(!cart.length){alert('Your cart is empty. Please add products first.');return;}const lines=cart.map((p,i)=>(i+1)+'. '+p).join('\n');const details=prompt('Enter your name and delivery location:');if(details===null)return;const msg='Hello OM HARE KRISHNA EXPORTS MASALA, I would like to place an order.\n\nProducts:\n'+lines+'\n\nName and delivery location: '+details;if(confirm('Your order request is ready. Send it through WhatsApp?'))window.open('https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(msg),'_blank');}
-document.getElementById('enquiryForm').addEventListener('submit',e=>{e.preventDefault();const msg='Hello OM HARE KRISHNA EXPORTS MASALA.\nName: '+document.getElementById('ename').value+'\nMobile: '+document.getElementById('ephone').value+'\nEnquiry: '+document.getElementById('etype').value+'\nMessage: '+document.getElementById('emsg').value;window.open('https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(msg),'_blank');});
+function showCart(){
+  if(!cart.length){alert('Your cart is empty. Please add products first.');return;}
+  const counts={};cart.forEach(p=>counts[p]=(counts[p]||0)+1);
+  const lines=Object.entries(counts).map(([p,n])=>p+' × '+n).join('\n');
+  const details=prompt('Enter your name and delivery location:');if(details===null)return;
+  const msg='Hello OM HARE KRISHNA EXPORTS MASALA, I would like to place an order.\n\nProducts:\n'+lines+'\n\nName and delivery location: '+details;
+  if(confirm('Your order request is ready. Send it through WhatsApp?'))window.open('https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(msg),'_blank','noopener');
+}
+document.getElementById('enquiryForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const msg='Hello OM HARE KRISHNA EXPORTS MASALA.\nName: '+document.getElementById('ename').value+'\nMobile: '+document.getElementById('ephone').value+'\nEnquiry: '+document.getElementById('etype').value+'\nMessage: '+document.getElementById('emsg').value;
+  window.open('https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(msg),'_blank','noopener');
+});
 document.getElementById('year').textContent=new Date().getFullYear();
 </script>
 </body>
